@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Página</title>
-  <style>
-    body {
-      font-family: Arial;
-      text-align: center;
-      background: #f2f2f2;
-      padding: 50px;
-    }
-    h1 { color: #333; }
-    button {
-      padding: 10px 20px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-    }
-  </style>
-</head>
-<body>
-  <h1>Hola, soy Oscar 👋</h1>
-  <p>Mi primera web en GitHub Pages</p>
-  <button onclick="saludar()">Haz clic</button>
+<meta charset="UTF-8">
+<title>Farmacia</title>
 
-  <script>
-    function saludar() {
-      alert("¡Funciona perfectamente!");
-    }
-  </script>
+<style>
+body { font-family: Arial; margin: 0; text-align: center; }
+
+/* PORTADA */
+.header {
+  background: url('JORNADAS/Farmacia/Estanteria Medicamentos.jpg') center/cover;
+  color: black;
+  padding: 80px 20px;
+}
+
+.line {
+  width: 200px;
+  height: 5px;
+  background: red;
+  margin: 10px auto;
+}
+
+/* CARDS */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  width: 250px;
+}
+
+.card img {
+  width: 100%;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px;
+  background: black;
+  color: white;
+  border: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 PROMPT: Cambia imagen de portada -->
+<div class="header">
+  <!-- 🔥 PROMPT: Titulo -->
+  <h1>GITHUB FARMACIA</h1>
+  <div class="line"></div>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <!-- 🔥 PROMPT: Imagen -->
+    <img src="JORNADAS/Farmacia/Medicamentos.png">
+    <h3>OBJETIVOS</h3>
+    <!-- 🔥 PROMPT: Texto -->
+    <p>Descripción...</p>
+    <button onclick="alert('Objetivos')">Ver</button>
+  </div>
+
+  <div class="card">
+    <img src="JORNADAS/Farmacia/Frontis Farmacia.jpg">
+    <h3>SERVICIOS</h3>
+    <p>Descripción...</p>
+    <button onclick="alert('Servicios')">Ver</button>
+  </div>
+
+  <div class="card">
+    <img src="JORNADAS/Farmacia/Productos Terbol en Estantes.jpg">
+    <h3>PROMOCIONES</h3>
+    <p>Descripción...</p>
+    <button onclick="alert('Promos')">Ver</button>
+  </div>
+
+</div>
+
 </body>
 </html>
