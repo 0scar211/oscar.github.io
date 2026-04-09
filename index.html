@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="UTF-8">
-<title>Farmacia</title>
+<title>Jornadas académicas U.E.B.</title>
 
 <style>
-body { font-family: Arial; margin: 0; text-align: center; }
 
-/* PORTADA */
+/* ============================= */
+/* 🔹 ESTILOS GENERALES */
+/* ============================= */
+body {
+  font-family: Arial;
+  margin: 0;
+  text-align: center;
+}
+
+/* ============================= */
+/* 🔹 PORTADA (IMAGEN GRANDE ARRIBA) */
+/* ============================= */
 .header {
-  background: url('JORNADAS/Farmacia/Estanteria Medicamentos.jpg') center/cover;
+  background: url('JORNADAS/Jornadas.png') center/cover;
   color: black;
   padding: 80px 20px;
 }
 
+/* 🔴 Línea decorativa debajo del título */
 .line {
   width: 200px;
   height: 5px;
@@ -21,7 +33,9 @@ body { font-family: Arial; margin: 0; text-align: center; }
   margin: 10px auto;
 }
 
-/* CARDS */
+/* ============================= */
+/* 🔹 CONTENEDOR DE TARJETAS */
+/* ============================= */
 .container {
   display: flex;
   justify-content: center;
@@ -29,20 +43,35 @@ body { font-family: Arial; margin: 0; text-align: center; }
   padding: 30px;
 }
 
+/* ============================= */
+/* 🔹 TARJETAS (CARDS) */
+/* ============================= */
 .card {
   width: 250px;
 }
 
+/* 🖼️ IMÁGENES UNIFORMES */
 .card img {
   width: 100%;
+  height: 180px;      /* 👈 todas del mismo tamaño */
+  object-fit: cover;  /* 👈 recorta sin deformar */
 }
 
+/* ============================= */
+/* 🔹 BOTONES */
+/* ============================= */
 button {
   margin-top: 10px;
-  padding: 8px;
+  padding: 10px 15px;
   background: black;
   color: white;
   border: none;
+  cursor: pointer;
+}
+
+/* 🔥 EFECTO HOVER */
+button:hover {
+  background: red;
 }
 
 </style>
@@ -50,36 +79,55 @@ button {
 
 <body>
 
-<!-- 🔥 PROMPT: Cambia imagen de portada -->
+<!-- ============================= -->
+<!-- 🔹 PORTADA -->
+<!-- ============================= -->
 <div class="header">
-  <!-- 🔥 PROMPT: Titulo -->
+  <!-- ✏️ CAMBIAR TÍTULO AQUÍ -->
   <h1>GITHUB FARMACIA</h1>
   <div class="line"></div>
 </div>
 
+<!-- ============================= -->
+<!-- 🔹 SECCIÓN DE TARJETAS -->
+<!-- ============================= -->
 <div class="container">
 
+  <!-- ============================= -->
+  <!-- 🔹 TARJETA 1: OBJETIVOS -->
+  <!-- ============================= -->
   <div class="card">
-    <!-- 🔥 PROMPT: Imagen -->
-    <img src="JORNADAS/Farmacia/Medicamentos.png">
-    <h3>OBJETIVOS</h3>
-    <!-- 🔥 PROMPT: Texto -->
-    <p>Descripción...</p>
-    <button onclick="alert('Objetivos')">Ver</button>
-  </div>
-
-  <div class="card">
+    <!-- 📸 IMAGEN -->
     <img src="JORNADAS/Farmacia/Frontis Farmacia.jpg">
-    <h3>SERVICIOS</h3>
-    <p>Descripción...</p>
-    <button onclick="alert('Servicios')">Ver</button>
+
+    <!-- 📝 TÍTULO -->
+    <h3>OBJETIVOS</h3>
+
+    <!-- 📄 DESCRIPCIÓN -->
+    <p>Conoce la misión, visión y metas de nuestra farmacia.</p>
+
+    <!-- 🔗 BOTÓN (REDIRECCIÓN) -->
+    <button onclick="location.href='objetivos.html'">Ver</button>
   </div>
 
+  <!-- ============================= -->
+  <!-- 🔹 TARJETA 2: SERVICIOS -->
+  <!-- ============================= -->
   <div class="card">
-    <img src="JORNADAS/Farmacia/Productos Terbol en Estantes.jpg">
+    <img src="img/servicios/serv.jpg">
+    <h3>SERVICIOS</h3>
+    <p>Descubre todos los servicios que ofrecemos para tu salud.</p>
+    <button onclick="location.href='servicios.html'">Ver</button>
+  </div>
+
+  <!-- ============================= -->
+  <!-- 🔹 TARJETA 3: PROMOCIONES -->
+  <!-- ============================= -->
+  <div class="card">
+    <img src="img/promociones/promo.jpg">
     <h3>PROMOCIONES</h3>
-    <p>Descripción...</p>
-    <button onclick="alert('Promos')">Ver</button>
+    <p>Aprovecha nuestras ofertas y descuentos especiales.</p>
+    <button onclick="location.href='promociones.html'">Ver</button>
   </div>
 
 </div>
