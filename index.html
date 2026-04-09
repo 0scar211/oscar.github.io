@@ -14,18 +14,19 @@ body {
   font-family: Arial;
   margin: 0;
   text-align: center;
+  background: #f5f5f5;
 }
 
 /* ============================= */
-/* 🔹 PORTADA (IMAGEN GRANDE ARRIBA) */
+/* 🔹 PORTADA */
 /* ============================= */
 .header {
-  background: url('JORNADAS/universidad_evanglica_boliviana_cover.jpg') center/cover;
-  color: black;
-  padding: 80px 20px;
+  background: url('JORNADAS/universidad_evanglica_boliviana_cover.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
 }
 
-/* 🔴 Línea decorativa debajo del título */
+/* 🔴 Línea decorativa */
 .line {
   width: 200px;
   height: 5px;
@@ -34,27 +35,43 @@ body {
 }
 
 /* ============================= */
-/* 🔹 CONTENEDOR DE TARJETAS */
+/* 🔹 CONTENEDOR RESPONSIVE (GRID) */
 /* ============================= */
 .container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+
+  /* 🔥 ESTO ES LA CLAVE */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
   gap: 20px;
   padding: 30px;
 }
 
 /* ============================= */
-/* 🔹 TARJETAS (CARDS) */
+/* 🔹 TARJETAS */
 /* ============================= */
 .card {
-  width: 250px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* 🖼️ IMÁGENES UNIFORMES */
 .card img {
   width: 100%;
-  height: 180px;      /* 👈 todas del mismo tamaño */
-  object-fit: cover;  /* 👈 recorta sin deformar */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* TEXTO */
+.card h3 {
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 14px;
 }
 
 /* ============================= */
@@ -69,7 +86,6 @@ button {
   cursor: pointer;
 }
 
-/* 🔥 EFECTO HOVER */
 button:hover {
   background: red;
 }
@@ -83,51 +99,37 @@ button:hover {
 <!-- 🔹 PORTADA -->
 <!-- ============================= -->
 <div class="header">
-  <!-- ✏️ CAMBIAR TÍTULO AQUÍ -->
-  <h1>GITHUB FARMACIA</h1>
+  <h1>JORNADAS ACADÉMICAS U.E.B.</h1>
   <div class="line"></div>
 </div>
 
 <!-- ============================= -->
-<!-- 🔹 SECCIÓN DE TARJETAS -->
+<!-- 🔹 CONTENEDOR DE TARJETAS -->
 <!-- ============================= -->
 <div class="container">
 
-  <!-- ============================= -->
-  <!-- 🔹 TARJETA 1: OBJETIVOS -->
-  <!-- ============================= -->
+  <!-- 🔹 EJEMPLO 1 -->
   <div class="card">
-    <!-- 📸 IMAGEN -->
     <img src="JORNADAS/Farmacia/Frontis Farmacia.jpg">
-
-    <!-- 📝 TÍTULO -->
-    <h3>OBJETIVOS</h3>
-
-    <!-- 📄 DESCRIPCIÓN -->
-    <p>Conoce la misión, visión y metas de nuestra farmacia.</p>
-
-    <!-- 🔗 BOTÓN (REDIRECCIÓN) -->
-    <button onclick="location.href='objetivos.html'">Ver</button>
+    <h3>FARMACIA</h3>
+    <p>Proyecto académico del área de salud.</p>
+    <button onclick="location.href='farmacia.html'">Ver</button>
   </div>
 
-  <!-- ============================= -->
-  <!-- 🔹 TARJETA 2: SERVICIOS -->
-  <!-- ============================= -->
+  <!-- 🔹 EJEMPLO 2 -->
   <div class="card">
-    <img src="img/servicios/serv.jpg">
-    <h3>SERVICIOS</h3>
-    <p>Descubre todos los servicios que ofrecemos para tu salud.</p>
-    <button onclick="location.href='servicios.html'">Ver</button>
+    <img src="JORNADAS/colegio1/img.jpg">
+    <h3>COLEGIO 1</h3>
+    <p>Participación en jornadas académicas.</p>
+    <button onclick="location.href='colegio1.html'">Ver</button>
   </div>
 
-  <!-- ============================= -->
-  <!-- 🔹 TARJETA 3: PROMOCIONES -->
-  <!-- ============================= -->
+  <!-- 🔹 EJEMPLO 3 -->
   <div class="card">
-    <img src="img/promociones/promo.jpg">
-    <h3>PROMOCIONES</h3>
-    <p>Aprovecha nuestras ofertas y descuentos especiales.</p>
-    <button onclick="location.href='promociones.html'">Ver</button>
+    <img src="JORNADAS/colegio2/img.jpg">
+    <h3>COLEGIO 2</h3>
+    <p>Presentación de proyectos innovadores.</p>
+    <button onclick="location.href='colegio2.html'">Ver</button>
   </div>
 
 </div>
